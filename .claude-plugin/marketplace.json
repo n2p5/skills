@@ -1,0 +1,17 @@
+{
+  "name": "n2p5-skills",
+  "description": "Agent skills for infinite games and autotelic pursuits, by n2p5.",
+  "owner": { "name": "Nathan Toups" },
+  "plugins": [
+    {
+      "name": "n2p5",
+      "description": "Agent skills for infinite games and autotelic pursuits.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/oblique-strategies",
+        "./skills/rubber-duck"
+      ]
+    }
+  ]
+}

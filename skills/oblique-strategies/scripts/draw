@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+# Draw one random card from the deck, regardless of the caller's cwd.
+# Randomness comes from /dev/urandom so the draw can't be biased.
+deck="$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)/deck.md"
+count=$(grep -c '^- ' "$deck")
+pick=$(( $(od -An -N2 -tu2 /dev/urandom | tr -dc 0-9) % count + 1 ))
+grep '^- ' "$deck" | sed -n "${pick}p" | cut -c3-

@@ -10,12 +10,13 @@ description: >-
 
 # Oblique Strategies
 
-1. **Draw honestly** — run this from the skill's directory. Never choose
-   the card yourself: you would pick the comfortable one. The shell picks;
-   you interpret.
+1. **Draw honestly.** Never pick the card yourself — you would choose the
+   comfortable one. The shell picks; you interpret. Run the draw script,
+   substituting this skill's base directory (the "Base directory for this
+   skill" path you were given when it loaded):
 
    ```bash
-   grep '^- ' deck.md | sed -n "$(( $(od -An -N2 -tu2 /dev/urandom | tr -dc 0-9) % $(grep -c '^- ' deck.md) + 1 ))p" | cut -c3-
+   "<skill base directory>/scripts/draw"
    ```
 
 2. **Present the card verbatim:**
