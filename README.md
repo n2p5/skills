@@ -5,10 +5,11 @@ infinite games and autotelic pursuits — creativity, play, and thinking well.
 
 ## What's here
 
-- **oblique-strategies** — draw a random lateral-thinking card when you're
-  stuck, and read it against the problem.
-- **rubber-duck** — a listener that asks questions and reflects your thinking
-  back, refusing to solve until you ask.
+- **[oblique-strategies](skills/oblique-strategies/SKILL.md)** — draw a
+  random lateral-thinking card when you're stuck, and read it against the
+  problem.
+- **[rubber-duck](skills/rubber-duck/SKILL.md)** — a listener that asks
+  questions and reflects your thinking back, refusing to solve until you ask.
 
 ## Install
 
