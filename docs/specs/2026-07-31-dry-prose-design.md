@@ -11,7 +11,7 @@ of whether the style holds up over a document of this kind.
 ## Summary
 
 A writing style for engineering documents that get forwarded: flat, neutral,
-declarative prose with no authorial voice and no em dashes. Model-invoked, one
+declarative prose with no authorial voice and no em dashes. User-invoked, one
 file, six rules.
 
 ## Spine
@@ -56,12 +56,26 @@ The balanced-clauses example was promoted out of the example gallery into its
 own rule, "make the argument instead of performing one." Its fix is replacement
 rather than deletion, so it is not a tell of "cut what isn't the fact."
 
-## Description
+## Invocation
 
-Reduced from roughly 120 words to 48. The source description listed one branch
-five ways: plainer, drier, more neutral, less flowery, less salesy all name the
-same trigger. Two branches survive, one trigger each: writing a forwarded
-document, and revising an existing draft.
+User-invoked: `disable-model-invocation: true`. The agent never sees this skill
+and cannot fire it, and neither can another skill. Reaching it means typing its
+name.
+
+The trade is deliberate. A writing style is something the author decides to
+apply, not something an agent should infer from the shape of a request, and the
+inference is the part that goes wrong: a skill that fires on "write this up"
+imposes a register the author did not ask for. Paying zero context load for a
+skill invoked by hand is the same decision `eng-log` makes.
+
+The cost lands on the human, who is now the index. Two user-invoked skills is
+under the threshold where that matters. If they multiply, the cure is a router
+skill that names them and when to reach for each.
+
+The description is therefore human-facing, cut from roughly 120 words to 16. Its
+trigger list is gone: no agent reads it, so phrasing it for retrieval would be
+writing for a reader that does not exist. What survives states what the skill is
+for a person scanning a list of skill names.
 
 ## Examples
 

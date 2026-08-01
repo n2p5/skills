@@ -1,11 +1,9 @@
 ---
 name: dry-prose
 description: >-
-  Dry prose: flat, neutral, declarative, with no authorial voice. For
-  engineering documents that get forwarded and read with no author present,
-  such as design docs, ADRs, post-mortems, incident reports, and status memos.
-  Use when writing one, or when making an existing draft plainer, less salesy,
-  or less flowery.
+  Flat, neutral, declarative prose for engineering documents that get forwarded
+  and read with no author present.
+disable-model-invocation: true
 ---
 
 # Dry Prose
