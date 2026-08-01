@@ -72,10 +72,12 @@ The cost lands on the human, who is now the index. Two user-invoked skills is
 under the threshold where that matters. If they multiply, the cure is a router
 skill that names them and when to reach for each.
 
-The description is therefore human-facing, cut from roughly 120 words to 16. Its
+The description is therefore human-facing, cut from roughly 120 words to 24. Its
 trigger list is gone: no agent reads it, so phrasing it for retrieval would be
 writing for a reader that does not exist. What survives states what the skill is
-for a person scanning a list of skill names.
+for a person scanning a list of skill names, and names both branches, since the
+human choosing the skill is the one who needs to know it sweeps existing drafts
+as well as governing new ones.
 
 ## Examples
 

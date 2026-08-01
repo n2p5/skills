@@ -2,7 +2,7 @@
 name: dry-prose
 description: >-
   Flat, neutral, declarative prose for engineering documents that get forwarded
-  and read with no author present.
+  and read with no author present. Writes new ones, or sweeps an existing draft.
 disable-model-invocation: true
 ---
 
@@ -26,8 +26,8 @@ and its elaboration, period for two independent statements, semicolon when those
 two belong together, comma for genuine subordination, parentheses for a real
 aside worth keeping. Deciding mechanically is the point, because it removes the
 moment where a writer reaches for a dash. Two exceptions, because they are not
-prose: a standalone dash in a table cell as an n/a marker, and en dashes in
-ranges (5–23 December, 2025–26).
+prose: a standalone em dash (U+2014) in a table cell as an n/a marker, and en
+dashes (U+2013) in ranges (5–23 December, 2025–26).
 
 **Cut what isn't the fact.** Four tells:
 
@@ -89,6 +89,9 @@ line by line.
 Leave verbatim material alone. Quoted text, and passages the user wrote and
 handed over, are outside the sweep unless they ask otherwise.
 
+The sweep is done when every em dash in the document is accounted for, each one
+replaced or deliberately kept, and the output has been read end to end.
+
 ## Over-correction
 
 The failure mode is stripping information along with the flourish. Dry is not
@@ -97,5 +100,4 @@ sentence into ambiguity costs the reader more than the flourish did. Do not
 flatten a heading until it stops distinguishing its section from the next. Do
 not strip structure, because tables, headings, numbered findings, status columns
 and dates are not voice and are how a forwarded document stays navigable without
-its author present. Do not replace an em dash with a comma splice; if the halves
-are independent, use a period or a semicolon.
+its author present. Do not replace an em dash with a comma splice.
