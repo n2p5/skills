@@ -1,6 +1,9 @@
 ---
 name: eng-log
-description: Reflective engineering journal. Interviews the user about their work and grounds the reflection in sources they grant access to — git history, the previous tier — so memory stays honest, without writing the log for them. Covers daily entries and weekly, monthly, quarterly, and annual rollups. Use when the user explicitly asks to write or roll up their engineering log.
+description: >-
+  Reflective engineering journal. Interviews you about your work, grounded in
+  sources you grant. Daily entries, plus weekly, monthly, quarterly, and annual
+  rollups.
 disable-model-invocation: true
 ---
 
