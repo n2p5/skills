@@ -1,25 +1,32 @@
 ---
 name: dry-prose
 description: >-
-  Flat, neutral, declarative prose for engineering documents that get forwarded
-  and read with no author present. Writes new ones, or sweeps an existing draft.
+  Flat, neutral, declarative prose for reference documentation: READMEs, API
+  docs, guides, runbooks, comments. Writes new docs, or sweeps an existing
+  draft.
 disable-model-invocation: true
 ---
 
 # Dry Prose
 
-The document will be forwarded. It will be read months later by people who were
-not in the room, with no author present to explain it. Every choice that draws
-attention to the writing invites the reader to evaluate the author instead of
-the fact.
+Someone is reading this while trying to do something else. They arrived from a
+search box or an error message, they are scanning for one specific thing, and
+they will leave as soon as they find it. Every choice that draws attention to
+the writing costs them time they did not come here to spend.
 
 The target is prose that reads as though no particular person wrote it: the
 reader finishes each sentence holding the fact and no impression of the
 sentence. This is a different target from good writing, which earns its effect
-through rhythm, contrast, and a well-placed dash. Those tools work against a
-forwarded document. Set them down.
+through rhythm, contrast, and a well-placed dash. Those tools ask for attention
+the reader does not have. Set them down.
 
 ## Rules
+
+**Address the reader.** Second person and the imperative. "Edit `config.yaml`
+and set `endpoint`", not "the configuration file may then be edited to set the
+endpoint". Passive voice and nominalization are the documentation equivalent of
+flourish: they put a narrator between the reader and the action, and they hide
+who does what.
 
 **No em dashes in prose. Punctuate by relationship instead:** colon for a label
 and its elaboration, period for two independent statements, semicolon when those
@@ -31,45 +38,36 @@ dashes (U+2013) in ranges (5–23 December, 2025–26).
 
 **Cut what isn't the fact.** Four tells:
 
-- *Trailing reframe*: a clause restating what was just said. "The retention
-  decision stands, the exposure does not need to." Delete it, or promote it to
-  its own sentence if it carries new information.
-- *Narrator frame*: "Context for the reader:", "It is worth noting that",
+- *Trailing reframe*: a clause restating what was just said. "Set `timeout` to
+  0 to disable it, which means no timeout is applied." Delete it, or promote it
+  to its own sentence if it carries new information.
+- *Narrator frame*: "In this section we will", "It is worth noting that",
   "Importantly,". Delete the frame and keep the fact. The fact was always the
   sentence.
-- *Intensifier*: "single highest-leverage" where "highest-impact" asserts the
-  same thing. If striking the modifier leaves the claim intact, strike it.
+- *Intensifier*: a modifier the claim survives without. In documentation the
+  recurring ones are "simply", "just", "easy", and "obviously", and they cost
+  more than tokens: when the step does not work, they tell the reader the
+  failure is theirs.
 - *Smoothing transition*: "Moreover,", "That said,", "Ultimately,". If a
   paragraph falls apart without them, the ordering is wrong and they were
   hiding it.
 
+**Describe what the system does, not what it is meant to do.** "Returns a
+non-zero exit code and writes the reason to stderr", not "handles errors
+gracefully". Intent is what the author holds; behavior is what the reader
+needs. Where you have not checked, say so rather than describing the design.
+
 **Keep "X, not Y" only when Y is a reading someone would actually make.** This
-one takes judgment. "Active exploitation for at least 18 days, not a one-time
-event" rules out the reading a reader would otherwise default to, so it carries
-information. "Relaunch behind the perimeter, not in front of it" says one thing
-twice for emphasis, so it carries only voice. Ask whether a reasonable reader
-would have made the mistake Y describes. If not, cut Y.
+one takes judgment. "Returns null, not undefined, when the key is absent" rules
+out the reading a reader would otherwise default to, so it carries information.
+"Runs in the background, not the foreground" says one thing twice for emphasis,
+so it carries only voice. Ask whether a reasonable reader would have made the
+mistake Y describes. If not, cut Y.
 
-**Claim only what the evidence shows.** Cite the number and let the reader
-characterize it; "a dramatic spike" is the author speaking. Where the evidence
-supports only the weaker claim, make the weaker claim. "No evidence of bulk
-export" is defensible and "no data was accessed" is not, and that gap is the
-whole document if better evidence surfaces later.
-
-**Headings name their subject, not their verdict.** "Detection and logging:
-nothing watched for 18 days" puts a finding where the reader meets it with no
-evidence in view. "Detection and logging: centralized telemetry and alerting"
-names the topic and lets the body carry the finding next to what supports it.
-
-**Make the argument instead of performing one.** Balanced clauses are the tell,
-and the honest rewrite is often longer:
-
-> Neither is a substitute for the other, and neither is sufficient alone: each
-> closes what the other leaves open, which is the argument for layering rather
-> than relying on any single control.
-
-> Neither replaces the other. A perimeter product will itself have a
-> vulnerability one day, which is why the layers need to be independent.
+**Headings say what is under them.** A reader scanning for one thing meets the
+headings first and reads nothing else until one matches. "Advanced usage" tells
+them nothing about whether their answer is there; "Streaming responses and
+backpressure" does. Name the subject, not the section's rank.
 
 ## Revising an existing draft
 
@@ -86,8 +84,9 @@ invisible in the output; a loud failure list is not.
 Re-read the output, not the diff. Tone problems live in flow and are invisible
 line by line.
 
-Leave verbatim material alone. Quoted text, and passages the user wrote and
-handed over, are outside the sweep unless they ask otherwise.
+Leave verbatim material alone. Quoted text, code samples, command output, and
+passages the user wrote and handed over are outside the sweep unless they ask
+otherwise.
 
 The sweep is done when every em dash in the document is accounted for, each one
 replaced or deliberately kept, and the output has been read end to end.
@@ -95,9 +94,9 @@ replaced or deliberately kept, and the output has been read end to end.
 ## Over-correction
 
 The failure mode is stripping information along with the flourish. Dry is not
-terse: a dry document can be long, it simply does not perform, and cutting a
-sentence into ambiguity costs the reader more than the flourish did. Do not
-flatten a heading until it stops distinguishing its section from the next. Do
-not strip structure, because tables, headings, numbered findings, status columns
-and dates are not voice and are how a forwarded document stays navigable without
-its author present. Do not replace an em dash with a comma splice.
+terse: a dry document can be long, it does not perform, and cutting a sentence
+into ambiguity costs the reader more than the flourish did. Do not flatten a
+heading until it stops distinguishing its section from the next. Do not strip
+structure, because tables, headings, code blocks, parameter lists, and numbered
+steps are not voice and are how a scanning reader finds anything. Do not replace
+an em dash with a comma splice.
