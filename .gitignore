@@ -3,3 +3,6 @@ appengine-generated/
 
 # Claude Code local settings
 .claude/settings.local.json
+
+# Stray artifact: written when $XDG_CONFIG_HOME was unset, not part of this repo.
+/$XDG_CONFIG_HOME/
