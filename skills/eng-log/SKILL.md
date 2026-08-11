@@ -30,8 +30,8 @@ Find out by asking:
 2. **What should I check to keep us honest?** For a daily that's usually git.
    Ask which repos, then run `git log` scoped to the period and their author.
    But take whatever they offer: a tracker, a calendar, notes, the tier below.
-3. **Where does the log live?** The first time, ask where they keep it and how
-   entries are named. Follow that; impose no structure of your own.
+3. **Where does the log live?** If you don't already know, ask where they keep
+   it and how entries are named. Follow that; impose no structure of your own.
 
 ## Daily
 
