@@ -5,6 +5,12 @@ infinite games and autotelic pursuits — creativity, play, and thinking well.
 
 ## What's here
 
+- **[dry-prose](skills/dry-prose/SKILL.md)** — flat, declarative prose for
+  reference documentation. Writes new docs, or sweeps the flourish out of an
+  existing draft.
+- **[eng-log](skills/eng-log/SKILL.md)** — a reflective engineering journal
+  that interviews you about your work, grounded in your git history. Daily
+  entries, with rollups from weekly through annual.
 - **[oblique-strategies](skills/oblique-strategies/SKILL.md)** — draw a
   random lateral-thinking card when you're stuck, and read it against the
   problem.

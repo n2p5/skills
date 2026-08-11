@@ -69,6 +69,9 @@ headings first and reads nothing else until one matches. "Advanced usage" tells
 them nothing about whether their answer is there; "Streaming responses and
 backpressure" does. Name the subject, not the section's rank.
 
+A new document is done when every rule has been applied and you have read it
+end to end.
+
 ## Revising an existing draft
 
 Inventory before editing. Read every em dash in context before changing any of
@@ -88,8 +91,9 @@ Leave verbatim material alone. Quoted text, code samples, command output, and
 passages the user wrote and handed over are outside the sweep unless they ask
 otherwise.
 
-The sweep is done when every em dash in the document is accounted for, each one
-replaced or deliberately kept, and the output has been read end to end.
+The sweep is done when every rule has been applied to the whole document,
+every em dash has been replaced or deliberately kept, and the output has been
+read end to end.
 
 ## Over-correction
 

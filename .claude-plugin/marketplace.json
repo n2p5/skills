@@ -9,6 +9,8 @@
       "source": "./",
       "strict": false,
       "skills": [
+        "./skills/dry-prose",
+        "./skills/eng-log",
         "./skills/oblique-strategies",
         "./skills/rubber-duck"
       ]
